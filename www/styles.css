@@ -1,0 +1,35 @@
+.main-header .logo {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+
+.skin-blue .main-header .logo {
+background-color: #2e4477;
+}
+
+.skin-blue .main-header .logo:hover {
+background-color: #2e4477;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+body {
+  font-family: "Helvetica";
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #666666;
+}
+
+.box.box-solid.box-primary>.box-header {
+  color:#fff;
+  background:#bf432d
+}
+
+#download
+{ 
+  color:#fff;
+  background:#bf432d
+}
