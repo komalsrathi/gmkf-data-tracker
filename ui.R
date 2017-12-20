@@ -35,7 +35,7 @@ dashboardPage(
                    tags$img(src='Kids_First_Graphic_Horizontal_OL_FINAL.DRC.png', height = "100%", width = "100%"))
             ),
         box(title = 'Studies', status = 'danger', width = 12, height = 350, 
-            dataTableOutput(outputId = "table", width = "auto", height = "auto")),
+            DT::dataTableOutput(outputId = "table", width = "auto", height = "auto")),
         bsTooltip(id = "table", title = "Click on row to see tracker", placement = "top", trigger = "hover", options = NULL),
         tabBox(title = '', id = "tabBox", selected = "Track Study", width = 12, height = 600, side = "left", 
                tabPanel(title = "Track Study", icon = icon("triangle-bottom", lib = "glyphicon"), grVizOutput(outputId = "indplot", width = "100%", height = 500),
