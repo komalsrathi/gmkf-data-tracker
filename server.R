@@ -2,13 +2,17 @@ source('R/viewDataTable.R')
 
 # read google sheet
 x <- gs_ls()
-sheet <- gs_title("DataTracketSheet_Test")
+# sheet <- gs_title("DataTracketSheet_Test")
+sheet <- gs_title("DataTrackerSheet")
 dat <- gs_read(ss = sheet, ws = 1)
 dat <- as.data.frame(dat)
+dat <- dat[,1:13] # only keep useful info
+dat[is.na(dat)] <- 0
 for(i in 6:ncol(dat)){
   dat[,i] <- paste0(dat[,i],"; ",format(dat[,i]/dat$`Anticipated Number`*100, digits = 2),"%")
 }
 summary <- dat[nrow(dat),]
+dat <- dat[-nrow(dat),]
 
 shinyServer(function(input, output, session){
   
